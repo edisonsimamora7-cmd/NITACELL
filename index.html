@@ -3,106 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Toko Online</title>
+  <title>NITA CELL | Aksesoris & Sparepart HP</title>
   <style>
-    body {font-family: Arial, sans-serif; margin:0; background:#f7f7f7;}
-    header {background:#222; color:#fff; padding:20px; text-align:center;}
-    .container {padding:20px;}
-    .products {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px;}
-    .card {background:#fff; border-radius:10px; padding:15px; box-shadow:0 4px 10px rgba(0,0,0,.1);}
-    .card img {width:100%; border-radius:10px;}
-    .btn {display:block; margin-top:10px; background:#25D366; color:#fff; text-align:center; padding:10px; border-radius:5px; text-decoration:none;}
-    footer {background:#222; color:#fff; text-align:center; padding:15px; margin-top:30px;}
+    :root{
+      --bg:#f4f6fb; --card:#fff; --text:#222; --primary:#0d6efd; --wa:#25D366;
+    }
+    body.dark{
+      --bg:#121212; --card:#1e1e1e; --text:#f1f1f1;
+    }
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);transition:.3s}
+    header{background:var(--primary);color:#fff;padding:20px}
+    header .top{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:50px;height:50px;border-radius:50%;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:bold}
+    .toggle{cursor:pointer;background:#fff;color:#000;padding:6px 10px;border-radius:6px;font-size:14px}
+    .promo{margin-top:10px;background:#ffc107;color:#000;padding:8px;border-radius:6px;font-weight:bold;text-align:center}
+    .container{padding:20px}
+    .categories{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+    .cat{padding:8px 14px;border-radius:20px;background:var(--card);box-shadow:0 2px 6px rgba(0,0,0,.1)}
+    .products{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px}
+    .card{background:var(--card);border-radius:14px;padding:15px;box-shadow:0 4px 10px rgba(0,0,0,.1)}
+    .card img{width:100%;border-radius:10px}
+    .btn{display:block;margin-top:10px;background:var(--wa);color:#fff;text-align:center;padding:10px;border-radius:8px;text-decoration:none;font-weight:bold}
+    footer{background:#000;color:#fff;text-align:center;padding:15px;margin-top:30px}
   </style>
 </head>
 <body>
 
 <header>
-  <h1>NITA CELL</h1>
-  <p>Aksesoris & Sparepart HP Terlengkap</p>
+  <div class="top">
+    <div class="brand">
+      <div class="logo">NC</div>
+      <div>
+        <h1 style="margin:0">NITA CELL</h1>
+        <small>Aksesoris & Sparepart HP</small>
+      </div>
+    </div>
+    <div class="toggle" onclick="toggleDark()">🌙 Dark Mode</div>
+  </div>
+  <div class="promo">🔥 Harga Murah • Bisa COD • Fast Respon WhatsApp</div>
 </header>
 
 <div class="container">
-  <h2>Produk Kami</h2>
+  <div class="categories">
+    <div class="cat">Aksesoris</div>
+    <div class="cat">Sparepart</div>
+    <div class="cat">Charger</div>
+    <div class="cat">Audio</div>
+  </div>
+
+  <h2>Produk Unggulan</h2>
   <div class="products">
 
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Case HP">
-      <h3>Case HP</h3>
-      <p>Rp 50.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Charger">
-      <h3>Charger</h3>
-      <p>Rp 75.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Kabel Data">
-      <h3>Kabel Data</h3>
-      <p>Rp 25.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Headset">
-      <h3>Headset</h3>
-      <p>Rp 60.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Powerbank">
-      <h3>Powerbank</h3>
-      <p>Rp 150.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="LCD HP">
-      <h3>LCD HP</h3>
-      <p>Rp 350.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Baterai HP">
-      <h3>Baterai HP</h3>
-      <p>Rp 120.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Speaker HP">
-      <h3>Speaker HP</h3>
-      <p>Rp 90.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Tempered Glass">
-      <h3>Tempered Glass</h3>
-      <p>Rp 20.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
-
-    <div class="card">
-      <img src="https://via.placeholder.com/300" alt="Flexible IC">
-      <h3>Flexible / IC</h3>
-      <p>Rp 80.000</p>
-      <a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a>
-    </div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Case HP</h3><p>Rp 50.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Charger</h3><p>Rp 75.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Kabel Data</h3><p>Rp 25.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Headset</h3><p>Rp 60.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Powerbank</h3><p>Rp 150.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>LCD HP</h3><p>Rp 350.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Baterai HP</h3><p>Rp 120.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Speaker HP</h3><p>Rp 90.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Tempered Glass</h3><p>Rp 20.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
+    <div class="card"><img src="https://via.placeholder.com/300"><h3>Flexible / IC</h3><p>Rp 80.000</p><a class="btn" href="https://wa.me/6281265836561" target="_blank">Beli via WhatsApp</a></div>
 
   </div>
 </div>
-</div>
 
 <footer>
-  <p>© 2026 Toko Online | Hubungi via WhatsApp</p>
+  <p>© 2026 NITA CELL • Order via WhatsApp 0812‑6583‑6561</p>
 </footer>
+
+<script>
+  function toggleDark(){document.body.classList.toggle('dark');}
+</script>
 
 </body>
 </html>
